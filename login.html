@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Log in | Expensity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body" data-page="login">
+<div class="wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="index.html">Expens<span>ity</span></a>
+    <a class="back-link" href="index.html">&larr; Back to home</a>
+  </nav>
+
+  <main class="auth-main">
+    <section class="auth-card" aria-labelledby="title">
+      <h1 id="title">Welcome <em class="hl">back</em></h1>
+      <p class="sub">Log in to see your expenses.</p>
+
+      <form class="auth-form" id="login-form" novalidate>
+        <div class="fg">
+          <label for="li-contact">Email or phone number</label>
+          <input class="field" id="li-contact" name="contact" type="text" inputmode="email" autocomplete="username" aria-describedby="err-li-contact" placeholder="you@example.com or +234 801 234 5678">
+          <p class="err-text" id="err-li-contact" role="alert"></p>
+        </div>
+
+        <div class="fg">
+          <label for="li-pw">Password</label>
+          <div class="pw-wrap">
+            <input class="field" id="li-pw" name="password" type="password" autocomplete="current-password" aria-describedby="err-li-pw" placeholder="Your password">
+            <button class="pw-toggle" type="button" aria-controls="li-pw" aria-pressed="false" aria-label="Show password">Show</button>
+          </div>
+          <p class="err-text" id="err-li-pw" role="alert"></p>
+        </div>
+
+        <div class="auth-links">
+          <div class="check">
+            <input id="li-remember" name="remember" type="checkbox">
+            <label for="li-remember">Keep me logged in</label>
+          </div>
+          <a href="forgot-password.html">Forgot password?</a>
+        </div>
+
+        <button class="btn" type="submit" id="submit-btn" data-label="Log in">Log in</button>
+        <p class="msg" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="auth-foot">New to Expensity? <a href="signup.html">Create an account</a></p>
+    </section>
+  </main>
+</div>
+<script src="auth.js"></script>
+</body>
+</html>

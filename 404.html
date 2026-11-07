@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page not found · Expensity</title>
+<meta name="robots" content="noindex">
+<style>
+  body{font-family:system-ui,sans-serif;background:#faf7f2;color:#1c1c1c;margin:0}
+  main{max-width:480px;margin:18vh auto;padding:0 24px;text-align:center}
+  a{color:#134e3a;font-weight:600}
+</style>
+</head>
+<body>
+  <main>
+    <h1>Page not found</h1>
+    <p>That page doesn't exist.</p>
+    <p><a id="home" href="./">Back to Expensity</a></p>
+  </main>
+  <script>
+    // Works for any repo name: on github.io project sites the first path segment is the repo.
+    (function () {
+      var seg = location.pathname.split("/")[1];
+      var base = (location.hostname.slice(-10) === ".github.io" && seg) ? "/" + seg + "/" : "/";
+      document.getElementById("home").setAttribute("href", base);
+    })();
+  </script>
+</body>
+</html>

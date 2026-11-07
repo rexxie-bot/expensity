@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Expensity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z M9 8h6 M9 12h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3 7h16a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2z M3 7l12-3v3 M16 14h2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pie" viewBox="0 0 24 24"><path d="M12 3v9h9a9 9 0 11-9-9z M15 3.5A9 9 0 0120.5 9H15z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z M7.5 8.5h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11 M7 11l5 5 5-5 M5 20h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><path d="M9 11a3.5 3.5 0 100-7 3.5 3.5 0 000 7z M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5 M16 4.5a3.3 3.3 0 010 6.5 M18 14.8c2 .6 3.2 2.3 3.5 5.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.5l2 11h10l2-8H7 M9 20h.01 M17 20h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 16v-4l2-5h12l2 5v4z M4 16v3h3v-3 M17 16v3h3v-3 M7 12h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 13.5h6L10 21l9-11h-6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="hero">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="logo" href="index.html" id="top">Expens<span>ity</span></a>
+      <a class="btn small" href="login.html" id="signin-link">Sign In</a>
+    </nav>
+
+    <div class="hero-grid">
+      <div>
+        <h1>The <em class="hl">easiest</em> way to track your expenses</h1>
+        <p class="proof"><span class="pill-note">Built for naira, dollars and more</span><span>Log a spend in <b>under 10 seconds</b>.</span></p>
+
+        <form class="signup" id="signup-hero" novalidate>
+          <fieldset>
+            <legend>I want to:</legend>
+            <div class="role"><input type="radio" name="role-hero" id="r1" value="self" checked><label for="r1">Track my own spending</label></div>
+            <div class="role"><input type="radio" name="role-hero" id="r2" value="small"><label for="r2">Split costs with a small group</label></div>
+            <div class="role"><input type="radio" name="role-hero" id="r3" value="team"><label for="r3">Manage spending for a team</label></div>
+          </fieldset>
+          <label class="label" for="contact-hero" style="position:absolute;left:-9999px">Email or phone number</label>
+          <input class="field" id="contact-hero" name="contact" type="text" inputmode="email" autocomplete="email" placeholder="Enter your email or phone number">
+          <button class="btn" type="submit">Get started for free</button>
+          <p class="msg" id="msg-hero" role="status" aria-live="polite"></p>
+          <div class="alt-login">
+            <span>Or get started with</span>
+            <button class="g-btn" type="button" id="g-hero" aria-label="Continue with Google">
+              <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22 12.2c0-.7-.1-1.4-.2-2H12v3.8h5.6a4.8 4.8 0 01-2.1 3.1v2.6h3.4c2-1.8 3.1-4.5 3.1-7.5z"/><path fill="#34A853" d="M12 22c2.8 0 5.2-.9 6.9-2.5l-3.4-2.6c-.9.6-2.1 1-3.5 1-2.7 0-5-1.8-5.800-4.300H2.700v2.700A10 10 0 0012 22z"/><path fill="#FBBC05" d="M6.200 13.600a6 6 0 010-3.800V7.100H2.700a10 10 0 000 9.200z"/><path fill="#EA4335" d="M12 6c1.500 0 2.900.5 4 1.600l3-3A10 10 0 002.700 7.100l3.500 2.700C7 7.800 9.300 6 12 6z"/></svg>
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div>
+        <div class="device" aria-label="Example of the Expensity app">
+          <div class="device-bar"><strong>This month</strong><span class="tag-ex">Example data</span></div>
+          <div class="summary">
+            <div><small>Spent</small><div class="num">₦248,500</div></div>
+            <div><small>Budget left</small><div class="num">₦116,500</div></div>
+            <div style="grid-column:1/-1"><small>68% of ₦365,000 budget</small><div class="bar" role="img" aria-label="68 percent of budget used"><i></i></div></div>
+          </div>
+          <ul class="rows">
+            <li><span class="dot"><svg><use href="#i-cart"/></svg></span><div><div class="what">Groceries</div><div class="when">Today · Cash</div></div><span class="amt">−₦18,400</span></li>
+            <li><span class="dot"><svg><use href="#i-car"/></svg></span><div><div class="what">Ride to work</div><div class="when">Today · Card</div></div><span class="amt">−₦3,200</span></li>
+            <li><span class="dot"><svg><use href="#i-bolt"/></svg></span><div><div class="what">Electricity token</div><div class="when">Yesterday · Transfer</div></div><span class="amt">−₦15,000</span></li>
+            <li><span class="dot"><svg><use href="#i-receipt"/></svg></span><div><div class="what">Lunch with the team</div><div class="when">Mon · Card</div></div><span class="amt">−₦9,750</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <ul class="checks">
+      <li><svg><use href="#i-check"/></svg><p><b>One place for everything.</b> Cash, cards and transfers in a single running list.</p></li>
+      <li><svg><use href="#i-check"/></svg><p><b>Budgets that talk back.</b> See how much of each budget is gone before the month ends.</p></li>
+      <li><svg><use href="#i-check"/></svg><p><b>Export when you need it.</b> Send a clean report to your accountant, boss or spreadsheet.</p></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="band alt" id="features">
+    <div class="wrap">
+      <p class="eyebrow">Features</p>
+      <h2 class="section-title">Everything you need to know where it went</h2>
+      <div class="grid">
+        <article class="card"><span class="ico"><svg><use href="#i-wallet"/></svg></span><h3>Quick logging</h3><p>Amount, category, done. Add an expense from the home screen without opening a form.</p></article>
+        <article class="card"><span class="ico"><svg><use href="#i-receipt"/></svg></span><h3>Receipt capture</h3><p>Attach a photo of the receipt to any expense so proof is never lost in your gallery.</p></article>
+        <article class="card"><span class="ico"><svg><use href="#i-pie"/></svg></span><h3>Budgets</h3><p>Set a limit per category or for the whole month and watch the bar fill up.</p></article>
+        <article class="card"><span class="ico"><svg><use href="#i-tag"/></svg></span><h3>Categories and tags</h3><p>Food, transport, bills or your own. Tag trips and projects to group spending later.</p></article>
+        <article class="card"><span class="ico"><svg><use href="#i-people"/></svg></span><h3>Shared expenses</h3><p>Split a bill with housemates or colleagues and see who owes what.</p></article>
+        <article class="card"><span class="ico"><svg><use href="#i-down"/></svg></span><h3>Reports and export</h3><p>Monthly summaries by category, ready to download as a spreadsheet or PDF.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="how">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2 class="section-title">Get set up in three steps</h2>
+      <div class="tabs" role="tablist" aria-label="Choose how you will use Expensity">
+        <button class="tab" role="tab" id="tab-self" aria-selected="true" aria-controls="steps" data-set="self">Just me</button>
+        <button class="tab" role="tab" id="tab-small" aria-selected="false" aria-controls="steps" data-set="small">Small group</button>
+        <button class="tab" role="tab" id="tab-team" aria-selected="false" aria-controls="steps" data-set="team">Finance and accounting</button>
+      </div>
+      <div class="steps" id="steps" role="tabpanel" aria-live="polite"></div>
+      <div class="center"><a class="btn" href="#join">Get started for free</a></div>
+    </div>
+  </section>
+
+  <section class="band alt" id="faq">
+    <div class="wrap">
+      <p class="eyebrow">FAQ</p>
+      <h2 class="section-title">Questions people ask first</h2>
+      <div class="faq">
+        <details><summary>What is Expensity?<svg><use href="#i-chev"/></svg></summary><p class="ans">Expensity is an expense tracker. You log what you spend, sort it into categories, set budgets and review reports.</p></details>
+        <details><summary>Who is Expensity for?<svg><use href="#i-chev"/></svg></summary><p class="ans">Anyone who wants to see their spending clearly: individuals, households, freelancers and small teams.</p></details>
+        <details><summary>What kind of expenses can I track?<svg><use href="#i-chev"/></svg></summary><p class="ans">Cash, card and transfer spending in any category. You can also record recurring bills and tag expenses by trip or project.</p></details>
+        <details><summary>Can I use more than one currency?<svg><use href="#i-chev"/></svg></summary><p class="ans">Yes. Each expense keeps its own currency, and reports can be shown in the currency you pick.</p></details>
+        <details><summary>How do I add expenses?<svg><use href="#i-chev"/></svg></summary><p class="ans">Type the amount on the home screen, choose a category, and save. Attach a receipt photo if you have one.</p></details>
+        <details><summary>Can I export my data?<svg><use href="#i-chev"/></svg></summary><p class="ans">Yes. Download any date range as a spreadsheet or PDF report.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="band cta" id="join">
+    <div class="wrap">
+      <h2>Ready to see where your money goes?</h2>
+      <p class="section-lede">Enter your email or phone number and start tracking today.</p>
+      <form class="signup" id="signup-cta" novalidate>
+        <label class="label" for="contact-cta" style="position:absolute;left:-9999px">Email or phone number</label>
+        <input class="field" id="contact-cta" name="contact" type="text" inputmode="email" autocomplete="email" placeholder="Enter your email or phone number">
+        <button class="btn" type="submit">Get started for free</button>
+        <p class="msg" id="msg-cta" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><h4>Product</h4><ul><li><a href="#features">Features</a></li><li><a href="#how">How it works</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="#faq">Help</a></li><li><a href="#faq">Privacy</a></li><li><a href="#faq">Terms</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#top">About Expensity</a></li><li><a href="#top">Blog</a></li><li><a href="#top">Contact</a></li></ul></div>
+      <div><h4>Get started</h4><ul><li><a href="signup.html">Create an account</a></li><li><a href="login.html">Log in</a></li></ul></div>
+    </div>
+    <p class="legal">© 2026 Expensity. Amounts shown in this page are examples and not real accounts.</p>
+    <div class="mark" aria-hidden="true">Expensity</div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

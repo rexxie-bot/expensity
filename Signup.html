@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Create account | Expensity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=DM+Sans:wght@400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="auth-body" data-page="signup">
+<div class="wrap">
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="index.html">Expens<span>ity</span></a>
+    <a class="back-link" href="index.html">&larr; Back to home</a>
+  </nav>
+
+  <main class="auth-main">
+    <section class="auth-card" aria-labelledby="title">
+      <h1 id="title">Create your <em class="hl">account</em></h1>
+      <p class="sub">Start tracking your spending in a few minutes.</p>
+
+      <form class="auth-form" id="signup-form" novalidate>
+        <div class="fg">
+          <label for="su-name">Full name</label>
+          <input class="field" id="su-name" name="name" type="text" autocomplete="name" aria-describedby="err-su-name" placeholder="Your full name">
+          <p class="err-text" id="err-su-name" role="alert"></p>
+        </div>
+
+        <div class="fg">
+          <label for="su-contact">Email or phone number</label>
+          <input class="field" id="su-contact" name="contact" type="text" inputmode="email" autocomplete="username" aria-describedby="err-su-contact" placeholder="you@example.com or +234 801 234 5678">
+          <p class="err-text" id="err-su-contact" role="alert"></p>
+        </div>
+
+        <div class="fg">
+          <label for="su-pw">Password</label>
+          <div class="pw-wrap">
+            <input class="field" id="su-pw" name="password" type="password" autocomplete="new-password" aria-describedby="su-hint err-su-pw" placeholder="At least 8 characters">
+            <button class="pw-toggle" type="button" aria-controls="su-pw" aria-pressed="false" aria-label="Show password">Show</button>
+          </div>
+          <div class="meter" id="su-meter" data-level="0" aria-hidden="true"><i></i></div>
+          <p class="meter-label" id="su-meter-label" aria-live="polite"></p>
+          <p class="hint" id="su-hint">Use at least 8 characters with a letter and a number.</p>
+          <p class="err-text" id="err-su-pw" role="alert"></p>
+        </div>
+
+        <div class="fg">
+          <label for="su-pw2">Confirm password</label>
+          <div class="pw-wrap">
+            <input class="field" id="su-pw2" name="confirm" type="password" autocomplete="new-password" aria-describedby="err-su-pw2" placeholder="Type the password again">
+            <button class="pw-toggle" type="button" aria-controls="su-pw2" aria-pressed="false" aria-label="Show password">Show</button>
+          </div>
+          <p class="err-text" id="err-su-pw2" role="alert"></p>
+        </div>
+
+        <div class="fg">
+          <div class="check">
+            <input id="su-terms" name="terms" type="checkbox" aria-describedby="err-su-terms">
+            <label for="su-terms">I agree to the Terms of Service and Privacy Policy.</label>
+          </div>
+          <p class="err-text" id="err-su-terms" role="alert"></p>
+        </div>
+
+        <button class="btn" type="submit" id="submit-btn" data-label="Create account">Create account</button>
+        <p class="msg" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="auth-foot">Already have an account? <a href="login.html">Log in</a></p>
+    </section>
+  </main>
+</div>
+<script src="auth.js"></script>
+</body>
+</html>
